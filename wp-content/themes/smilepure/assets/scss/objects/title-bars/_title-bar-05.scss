@@ -1,0 +1,15 @@
+.page-title-bar-05 {
+	.title-bar-text {
+		margin-top: 20px;
+	}
+
+	.breadcrumb-wrap {
+		position: absolute;
+		bottom: 41px;
+		left: 0;
+		width: 100%;
+		@include media-breakpoint-down(md) {
+			bottom: 20px;
+		}
+	}
+}

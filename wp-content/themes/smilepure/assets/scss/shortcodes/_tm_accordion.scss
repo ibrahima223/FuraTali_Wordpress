@@ -1,0 +1,263 @@
+.tm-accordion {
+
+	.accordion-title-wrapper {
+		cursor: pointer;
+	}
+
+	.accordion-title {
+		@extend %transit2;
+		margin-bottom: 0;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	.accordion-content {
+		display: none;
+	}
+
+	&.style-1 {
+		.accordion-section {
+			border: 1px solid #ddd;
+			background-color: #f7f7f7;
+
+			+ .accordion-section {
+				margin-top: 30px;
+			}
+		}
+
+		.accordion-title {
+			position: relative;
+			background-color: #f7f7f7;
+			line-height: 1.2;
+			padding: 15px 50px 15px 25px;
+
+			&:before {
+				content: '';
+				width: 3px;
+				height: 0;
+				background-color: red;
+				position: absolute;
+				top: 0;
+				left: 0;
+				@extend %transit;
+			}
+		}
+
+		.accordion-content {
+			background-color: #fff;
+			border-top: 1px solid #ddd;
+		}
+
+		.title-prefix {
+			margin-right: 5px;
+		}
+
+		.accordion-icon {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			font-weight: 500;
+			color: #bbb;
+
+			&:before {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				font-size: 24px;
+				content: '\f055';
+				@extend %FontAwesomeLight;
+
+			}
+		}
+
+		.active {
+			.accordion-icon {
+				&:before {
+					content: '\f056';
+				}
+			}
+		}
+
+		.accordion-title-wrapper:hover,
+		.active {
+			.accordion-title {
+				&:before {
+					height: 100%;
+				}
+			}
+		}
+
+		.accordion-content {
+			padding: 26px 35px 43px;
+		}
+	}
+
+	&.style-2 {
+		.accordion-section {
+			+ .accordion-section {
+				margin-top: 20px;
+			}
+		}
+
+		.accordion-title {
+			line-height: 1.5;
+
+			.title-text {
+				display: inline;
+				position: relative;
+				padding: 5px 0;
+				border-bottom: 3px solid transparent;
+				background-size: 0px 2px;
+				background-repeat: no-repeat;
+				background-position: left 85%;
+				@include transit;
+			}
+		}
+
+		.title-prefix {
+			margin-right: 3px;
+		}
+
+		.accordion-title-wrapper:hover,
+		.active {
+			.accordion-title {
+				.title-text {
+					background-size: 100% 2px;
+				}
+			}
+		}
+
+		.accordion-content {
+			padding: 30px 0 10px;
+		}
+
+		&.color-light {
+			.accordion-title {
+				color: #fff;
+			}
+		}
+	}
+
+	&.style-3 {
+		.accordion-section {
+			background: #ffffff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, .06);
+
+			&.active {
+				box-shadow: 0 20px 20px rgba(0, 0, 0, .06);
+
+				.accordion-icon {
+					color: #fff;
+				}
+			}
+
+			+ .accordion-section {
+				margin-top: 30px;
+			}
+		}
+
+		.accordion-title {
+			position: relative;
+			line-height: 1.2;
+			padding: 15px 50px 15px 25px;
+
+			&:hover {
+				color: #ffffff;
+
+				span {
+					color: #fff;
+				}
+			}
+		}
+
+		.title-prefix {
+			@extend %transit;
+			margin-right: 5px;
+		}
+
+		.accordion-icon {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			font-weight: 500;
+			color: #bbb;
+
+			&:before {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				font-size: 24px;
+				content: '\f055';
+				@extend %FontAwesomeLight;
+			}
+		}
+
+		.active {
+			.accordion-icon {
+				&:before {
+					content: '\f056';
+				}
+			}
+		}
+
+		.accordion-title-wrapper:hover,
+		.active {
+			.accordion-title {
+				color: #ffffff;
+			}
+		}
+
+		.accordion-content {
+			padding: 26px 35px 43px;
+		}
+	}
+
+	&.style-4 {
+		padding: 25px 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+
+		.accordion-section {
+			+ .accordion-section {
+				margin-top: 25px;
+				padding-top: 25px;
+				border-top: 1px solid #eee;
+			}
+		}
+
+		.accordion-title {
+			line-height: 1.5;
+		}
+
+		.title-prefix {
+			margin-right: 3px;
+		}
+
+		.accordion-content {
+			padding: 30px 0 10px 20px;
+		}
+
+		&.color-light {
+			border-top: 1px solid rgba(204, 204, 204, 0.13);
+			border-bottom: 1px solid rgba(204, 204, 204, 0.13);
+
+			.accordion-section {
+				+ .accordion-section {
+					border-top: 1px solid rgba(204, 204, 204, 0.13);
+				}
+			}
+
+			.accordion-title {
+				color: #fff;
+			}
+
+			.accordion-content {
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.page-title-bar {
+	position: relative;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 0;
+	}
+}
+
+.page-title-bar-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.page-title-bar-inner {
+	border-bottom-style: solid;
+}
+
+.page-title-bar-heading {
+	position: relative;
+	z-index: 2;
+}
+
+.title-box {
+	position: relative;
+	z-index: 2;
+}
+
+.insight_core_breadcrumb {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 2;
+
+	li {
+		display: inline-block;
+		margin-right: 11px;
+		margin-bottom: 10px;
+
+		&:last-child {
+			padding-right: 0;
+			margin-right: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		position: relative;
+		padding: 2px 0;
+		overflow: hidden;
+		z-index: 1;
+
+		&:after {
+			@extend %FontAwesomeRegular;
+			content: '\f105';
+			font-size: 12px;
+			margin-left: 15px;
+		}
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			position: absolute;
+			left: auto;
+			right: 0;
+			z-index: -1;
+			transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+			background: currentColor;
+		}
+
+		&:hover {
+			&:before {
+				width: 100%;
+				left: 0;
+				right: auto;
+			}
+		}
+	}
+}

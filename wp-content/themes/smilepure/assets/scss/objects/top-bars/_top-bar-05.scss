@@ -1,0 +1,72 @@
+.top-bar-05 {
+	.top-bar-wrap {
+		position: relative;
+		display: block;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			padding: 0 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 0 55px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0 85px;
+		}
+	}
+
+	.top-bar-text {
+		width: 100%;
+		text-align: center;
+
+		a {
+			text-decoration: underline;
+		}
+
+		span {
+			margin-right: 5px;
+		}
+
+	}
+
+	.remove {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		display: inline-block;
+		transform: translateY(-50%);
+		z-index: 2;
+		font-size: 100px;
+		line-height: 0;
+		cursor: pointer;
+		height: 30px;
+		width: 30px;
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 19px;
+			left: 4px;
+			content: '';
+			width: 16px;
+			height: 1px;
+			background: currentColor;
+			transform-origin: 50% 50%;
+			@extend %transit;
+		}
+
+		&:before {
+			transform: rotate(-45deg);
+		}
+
+		&:after {
+			transform: rotate(45deg);
+		}
+
+		&:hover {
+			&:before,
+			&:after {
+				transform: none;
+			}
+		}
+	}
+}

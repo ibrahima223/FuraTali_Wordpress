@@ -1,0 +1,9 @@
+.page-content {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	.has-title-bar-06 &,
+	.has-title-bar-07 & {
+		padding-top: 150px;
+	}
+}

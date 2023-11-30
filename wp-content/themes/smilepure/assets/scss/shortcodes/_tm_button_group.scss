@@ -1,0 +1,12 @@
+.tm-button-group {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: -10px;
+
+	.tm-button-wrapper {
+		padding: 10px;
+	}
+}

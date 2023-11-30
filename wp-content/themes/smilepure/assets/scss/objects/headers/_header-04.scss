@@ -1,0 +1,146 @@
+.header-04 {
+	.header-wrap {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			padding: 0 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 0 55px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0 85px;
+		}
+	}
+
+	.branding {
+		flex-shrink: 0;
+	}
+
+	.header-right {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.header-right-wrap {
+		display: flex;
+		align-items: center;
+		margin: 0 -15px;
+
+		> div {
+			padding: 0 15px;
+		}
+	}
+
+	.header-search-form-wrap {
+		.search-btn-icon {
+			font-size: 16px;
+		}
+
+		.search-field {
+			height: 50px;
+			border: 0;
+			width: 300px;
+			max-width: 300px;
+		}
+	}
+
+	.header-social-networks {
+		a {
+			&:hover {
+				color: #fff !important;
+			}
+		}
+	}
+
+	.desktop-menu & {
+		.page-navigation {
+			flex-grow: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.menu--primary {
+			position: static;
+			text-align: left;
+		}
+
+		.menu__container {
+			> li {
+				> a {
+					&:after {
+						@extend %transit;
+						content: '';
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						width: 0;
+						height: 3px;
+					}
+				}
+
+				&:hover {
+					> a {
+						&:after {
+							width: 100%;
+							left: 0;
+							right: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1820px) {
+	.header-04 {
+		.header-search-form-wrap .search-field {
+			width: 350px;
+			max-width: 350px;
+		}
+	}
+}
+
+@media (max-width: 1720px) {
+	.desktop-menu .header-04 .menu--primary {
+		text-align: right;
+	}
+
+	.header-04 {
+		.header-right-more {
+			display: block;
+		}
+
+		.header-right-inner {
+			position: absolute;
+			top: 100%;
+			left: -3px;
+			right: -3px;
+			padding: 10px !important;
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.09);
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(30px);
+			flex-wrap: wrap;
+		}
+
+		.header-more-tools-opened & {
+			.header-right-inner {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.header-04 {
+		.header-right {
+			justify-content: flex-end;
+		}
+
+	}
+}

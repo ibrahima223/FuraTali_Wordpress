@@ -1,0 +1,123 @@
+.tm-countdown {
+	text-align: center;
+	max-width: 770px;
+	margin: 0 auto;
+
+	.countdown-wrap {
+		margin: 0 -35px;
+	}
+
+	.day,
+	.hour,
+	.minute,
+	.second {
+		display: inline-block;
+		text-align: center;
+		margin: 0 35px;
+	}
+
+	&.style-1 {
+		.number {
+			display: inline-block;
+			font-size: 70px;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		.text {
+			display: block;
+			text-transform: uppercase;
+			letter-spacing: 0.9px;
+			font-weight: 700;
+			font-size: 14px;
+			margin-top: 10px;
+		}
+
+		&.skin-light {
+			.number {
+				color: #ffffff;
+			}
+
+			.text {
+				color: rgba(255, 255, 255, .7);
+			}
+		}
+	}
+
+	&.style-2 {
+		.number {
+			display: block;
+			font-size: 70px;
+			line-height: 1;
+			font-weight: 700;
+			text-shadow: 7px 2px 0 rgba(0, 0, 0, .1);
+			margin-bottom: 10px;
+		}
+
+		.text {
+			font-weight: 700;
+			font-size: 14px;
+			letter-spacing: 0.9px;
+			text-transform: uppercase;
+		}
+
+		&.skin-light {
+			.number {
+				color: #ffffff;
+				text-shadow: 7px 2px 0 rgba(255, 255, 255, .2);
+			}
+
+			.text {
+				color: rgba(255, 255, 255, .7);
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.tm-countdown {
+		&.style-1 {
+			.number {
+				font-size: 60px;
+			}
+		}
+
+		&.style-2 {
+			.number {
+				font-size: 60px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.tm-countdown {
+		&.style-1 {
+			.number {
+				font-size: 50px;
+			}
+		}
+
+		&.style-2 {
+			.number {
+				font-size: 50px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.tm-countdown {
+		&.style-1 {
+			.number {
+				font-size: 40px;
+			}
+		}
+
+		&.style-2 {
+			.number {
+				font-size: 40px;
+			}
+		}
+	}
+}

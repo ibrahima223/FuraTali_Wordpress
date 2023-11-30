@@ -1,0 +1,48 @@
+.wpb_column {
+	&.column-full-height {
+		.wpb_wrapper {
+			height: 100%;
+		}
+	}
+}
+
+.tm-image {
+	&.up-80px {
+		.image {
+			transform: translateY(-80px);
+		}
+	}
+}
+
+.box-bg-primary {
+	.vc_column-inner {
+		.wpb_wrapper {
+			background-color: $color__primary;
+			padding: 40px 40px 40px 10px;
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				width: 30px;
+				height: 100%;
+				position: absolute;
+				left: -30px;
+				top: 0;
+				background-color: inherit;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.vc_column-inner {
+			.wpb_wrapper {
+				padding: 40px;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,317 @@
+form.submitting {
+	.wpcf7-spinner {
+		display: block;
+	}
+}
+
+.wpcf7 {
+	.wpcf7-spinner {
+		display: none;
+		margin: 30px auto 0;
+	}
+
+	.screen-reader-response {
+		display: none;
+	}
+
+	.wpcf7-response-output {
+		border: 0 !important;
+		color: #fff;
+		background: #2196f3;
+	}
+
+	form.sent {
+		.wpcf7-response-output {
+			margin: 30px 0 0 !important;
+			padding: 15px 20px !important;
+			background: #5cb85c;
+		}
+	}
+
+	form.failed,
+	form.aborted {
+		.wpcf7-response-output {
+			margin: 30px 0 0 !important;
+			padding: 15px 20px !important;
+			background: #d9534f;
+		}
+	}
+
+	form.spam {
+		.wpcf7-response-output {
+			margin: 30px 0 0 !important;
+			padding: 15px 20px !important;
+			background: #cf7b50;
+		}
+	}
+
+	form.invalid,
+	form.unaccepted,
+	form.payment-required {
+		.wpcf7-response-output {
+			margin: 30px 0 0 !important;
+			padding: 15px 20px !important;
+			background: #f0ad4e;
+		}
+	}
+
+	.wpcf7-not-valid-tip {
+		margin-top: 5px;
+		color: #d9534f;
+		font-size: 12px;
+	}
+}
+
+.tm-contact-form-7 {
+	.wpcf7-form {
+		br {
+			display: none;
+		}
+	}
+
+	.row {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	[class*='col-'] {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	label {
+		display: block;
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 13px;
+	}
+
+	.form-item {
+		position: relative;
+
+		&.has-icon {
+			.wpcf7-text,
+			.wpcf7-date {
+				padding-right: 40px;
+			}
+		}
+	}
+
+	.form-icon {
+		font-size: 20px;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		line-height: 0;
+	}
+
+	.wpcf7-form-control-wrap {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.wpcf7-textarea {
+		margin-bottom: 30px;
+		height: 150px;
+	}
+
+	.ajax-loader {
+		display: none !important;
+	}
+
+	.wpcf7-submit {
+		display: block;
+		margin: 0;
+	}
+
+	.form-title {
+		font-size: 32px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.form-text {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	&.gutter-20 {
+		.row {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		[class*='col-'] {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.wpcf7-form-control-wrap {
+			margin-bottom: 20px;
+		}
+	}
+
+	&.gutter-40 {
+		.row {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		[class*='col-'] {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.wpcf7-form-control-wrap {
+			margin-bottom: 40px;
+		}
+	}
+
+	&.style-02 {
+		.wpcf7-text,
+		.wpcf7-date,
+		.wpcf7-select,
+		.wpcf7-textarea {
+			background-color: #ffffff;
+			border: 1px solid #dddddd;
+			padding: 0 15px;
+		}
+
+		.wpcf7-textarea {
+			background-color: #ffffff;
+			border: 1px solid #dddddd;
+			height: 120px;
+			margin-bottom: 40px;
+			padding: 10px 15px;
+		}
+
+		.wpcf7-submit {
+			background-color: #222222;
+			border-color: #222222;
+			color: #ffffff;
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+
+	&.style-03 {
+		.wpcf7-text,
+		.wpcf7-date,
+		.wpcf7-select,
+		.wpcf7-textarea {
+			background-color: #ffffff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+			border: 0;
+			padding: 0 15px;
+		}
+
+		.wpcf7-textarea {
+			background-color: #ffffff;
+			height: 120px;
+			padding: 20px 15px;
+			margin-bottom: 40px;
+		}
+
+		.wpcf7-submit {
+			color: #ffffff;
+			width: 100%;
+		}
+	}
+
+	&.style-04 {
+		.wpcf7-submit {
+			background-color: $color__secondary;
+		}
+	}
+
+	&.style-05 {
+		label {
+			color: #fff;
+		}
+
+		.wpcf7-text,
+		.wpcf7-date,
+		.wpcf7-select,
+		.wpcf7-textarea {
+			background-color: #ffffff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+			border: 0;
+			padding: 0 15px;
+		}
+
+		.wpcf7-textarea {
+			background-color: #ffffff;
+			height: 120px;
+			padding: 20px 15px;
+			margin-bottom: 40px;
+		}
+	}
+
+}
+
+.form-online-support {
+	padding: 44px 35px 62px;
+	background: #eeeeee url(assets/images/icon-envelope-open.png) no-repeat bottom right;
+	border-radius: 5px;
+
+	.form-title {
+		font-size: 30px;
+		margin-bottom: 38px;
+		line-height: 1.66;
+	}
+
+	select,
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='password'],
+	input[type='search'],
+	input[type='number'],
+	input[type='tel'] {
+		height: 50px;
+		background: #ffffff;
+	}
+
+	.wpcf7-textarea {
+		height: 125px;
+		background: #ffffff;
+	}
+
+	input[type='submit'],
+	input[type='reset'],
+	button {
+		height: 50px;
+		line-height: 46px;
+		padding: 0 22px;
+	}
+}
+
+.wrap-style-01,
+.wrap-style-02 {
+	.wpcf7-submit {
+		width: 100%;
+	}
+}
+
+.wrap-style-01 {
+	padding: 50px 25px 40px;
+	background: #ffffff;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, .03);
+}
+
+.wrap-style-02 {
+	padding: 84px 45px 85px;
+	background: #ffffff url(assets/images/icon-money-bag.png) no-repeat top right -30px;
+}
+
+@include media-breakpoint-down(sm) {
+	.wrap-style-02 {
+		padding: 60px 30px;
+
+		.form-title {
+			font-size: 28px;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.rtl {
+	.tm-swiper {
+		.swiper-button-next {
+			right: auto;
+
+			i:before {
+				content: "\f104";
+			}
+		}
+
+		.swiper-button-prev {
+			i:before {
+				content: "\f105";
+			}
+		}
+	}
+
+	.fa-long-arrow-alt-left:before {
+		content: "\f30b";
+	}
+
+	.fa-long-arrow-alt-right:before {
+		content: "\f30a";
+	}
+
+	.fa-angle-right:before {
+		content: "\f104";
+	}
+
+	.fa-angle-left:before {
+		content: "\f105";
+	}
+
+	.fa-chevron-left:before {
+		content: "\f054";
+	}
+
+	.fa-chevron-right:before {
+		content: "\f053";
+	}
+
+	.tm-gallery-slider .lSAction .lSNext {
+		right: auto;
+
+		.nav-button-icon:before {
+			content: "\f104";
+		}
+	}
+
+	.tm-gallery-slider .lSAction .lSPrev {
+		.nav-button-icon:before {
+			content: "\f105";
+		}
+	}
+
+	.insight_core_breadcrumb a:after {
+		content: '\f104';
+	}
+}

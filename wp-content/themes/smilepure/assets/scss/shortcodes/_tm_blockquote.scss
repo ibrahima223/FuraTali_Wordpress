@@ -1,0 +1,87 @@
+.tm-blockquote {
+
+	&.style-1 {
+		blockquote {
+			margin: 0 !important;
+			padding: 35px 0 0;
+			border: 0;
+
+			&:before {
+				top: 0;
+				left: 0;
+				font-size: 40px;
+			}
+		}
+
+		.quote-text {
+			font-size: 24px;
+			font-style: italic;
+			line-height: 1.8;
+		}
+
+		.quote-footer {
+			border-top: 1px dashed #d4d2d2;
+			padding-top: 35px;
+			margin-top: 30px;
+			display: flex;
+			align-items: center;
+
+			.quote-photo {
+				flex-shrink: 0;
+				margin-right: 20px;
+
+				img {
+					border-radius: 50%;
+					width: 60px;
+					height: 60px;
+				}
+			}
+
+			.quote-info {
+				flex-grow: 1;
+			}
+
+			.heading {
+				font-size: 16px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 4px;
+			}
+
+			.quote-position {
+				font-size: 15px;
+			}
+		}
+	}
+
+	&.style-2 {
+		.quote-photo {
+			margin-bottom: 30px;
+		}
+
+		.heading {
+			font-size: 20px;
+			margin-bottom: 4px;
+		}
+
+		blockquote {
+			margin-bottom: 20px;
+		}
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			align-items: center;
+			margin: 0 -15px;
+
+			.quote-photo,
+			.quote-content {
+				width: 50%;
+				padding: 0 15px;
+			}
+
+			.quote-photo {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

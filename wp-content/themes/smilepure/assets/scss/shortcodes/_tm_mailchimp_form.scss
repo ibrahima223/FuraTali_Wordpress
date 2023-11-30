@@ -1,0 +1,112 @@
+.tm-mailchimp-form {
+	.form-item {
+		display: flex;
+	}
+
+	button[type='submit'],
+	input[type='submit'] {
+		height: 50px;
+		line-height: 50px;
+		flex-shrink: 0;
+	}
+
+	&.style-1 {
+		input[type='email'] {
+			height: 50px;
+			border: 1px solid #eee;
+			background-color: #f7f7f7;
+			padding: 0 15px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&.style-2 {
+		input[type='email'] {
+			background: rgba(255, 255, 255, .1);
+			box-shadow: 0 0 20px rgba(0, 0, 0, .06);
+			border: 0;
+			padding: 0 15px;
+		}
+	}
+
+	&.style-3,
+	&.style-4 {
+		button[type='submit'] {
+			font-size: 0;
+			padding: 0;
+			width: 50px;
+			position: relative;
+
+			&:after {
+				content: '\f2c3';
+				font-family: Ionicons;
+				font-size: 20px;
+				font-weight: 500;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	&.style-3 {
+		input[type='email'] {
+			background-color: #334657;
+			border-color: #334657;
+
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: rgba(255, 255, 255, 0.5);
+				font-style: italic;
+				font-size: 14px;
+			}
+
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: rgba(255, 255, 255, 0.5);
+				font-style: italic;
+				font-size: 14px;
+			}
+
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: rgba(255, 255, 255, 0.5);
+				font-style: italic;
+				font-size: 14px;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+				color: rgba(255, 255, 255, 0.5);
+				font-style: italic;
+				font-size: 14px;
+			}
+
+			&:focus {
+				border-color: #311d39 !important;
+				color: #fff;
+			}
+		}
+
+		button[type='submit'] {
+			&:hover {
+				background-color: #fff;
+			}
+		}
+	}
+
+	&.style-4 {
+		button[type='submit'] {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	&.style-5 {
+		input[type='email'] {
+			height: 50px;
+			border: 1px solid #eee;
+			background-color: #fff;
+			padding: 0 15px;
+			margin-bottom: 20px;
+		}
+	}
+}

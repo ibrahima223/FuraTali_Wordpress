@@ -1,0 +1,33 @@
+.page-title-bar-06,
+.page-title-bar-07 {
+	.page-title-bar-inner {
+		//min-height: 290px;
+	}
+
+	.title-box {
+		padding: 40px 50px 60px;
+		border-bottom: 5px solid $color__primary;
+		transform: translateY(50px);
+		position: relative;
+		z-index: 2;
+		//min-height: 280px;
+		box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.06);
+	}
+
+	.page-breadcrumb {
+		margin-bottom: 15px;
+	}
+
+	.title-bar-text {
+		margin-top: 20px;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.page-title-bar-06,
+	.page-title-bar-07 {
+		.title-box {
+			padding: 40px 30px 45px;
+		}
+	}
+}

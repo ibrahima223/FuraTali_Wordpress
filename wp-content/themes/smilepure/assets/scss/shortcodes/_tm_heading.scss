@@ -1,0 +1,197 @@
+.typed-cursor {
+	opacity: 1;
+	animation: blink .7s infinite;
+}
+
+.tm-heading {
+	&.center {
+		.heading {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0;
+	}
+
+	mark {
+		background-color: transparent;
+	}
+
+	a {
+		font-size: inherit;
+		color: inherit;
+		position: relative;
+		text-decoration: none;
+
+		&:after {
+			@include transit-back;
+			content: '';
+			height: 1px;
+			left: 0;
+			width: 0;
+			background-color: currentColor;
+			position: absolute;
+			bottom: -1px;
+		}
+
+		&:hover {
+			color: inherit;
+
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+
+	.icon {
+		display: inline-block;
+		margin-right: 20px;
+		vertical-align: inherit;
+	}
+
+	&.with-separator-1 {
+		.heading {
+			display: inline-block;
+			position: relative;
+			font-size: 36px;
+			padding-bottom: 5px;
+			overflow: hidden;
+
+			&:before,
+			&:after {
+				position: absolute;
+				bottom: 0;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: #ddd;
+				@extend %transit;
+			}
+
+			&:before {
+				left: 0;
+			}
+
+			&:after {
+				right: calc(100% + 10px);
+
+			}
+
+			&:hover {
+				&:before {
+					left: calc(100% + 10px);
+				}
+
+				&:after {
+					right: 0;
+				}
+			}
+		}
+	}
+
+	&.with-separator-2 {
+		.heading {
+			position: relative;
+			display: inline-block;
+			padding-bottom: 30px;
+
+			&:after {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				content: '';
+				display: block;
+				width: 100px;
+				height: 2px;
+				background: red;
+			}
+		}
+
+		&.center {
+			.heading {
+				&:after {
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+
+		&.right {
+			.heading {
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	&.modern-icon {
+		.heading {
+			position: relative;
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				right: calc(100% - 40px);
+				transform: translateY(-50%);
+				margin: 0;
+				z-index: -1;
+			}
+		}
+	}
+
+	&.highlight-big-number {
+		@extend %clearfix;
+
+		mark {
+			display: block;
+			font-size: 65px;
+			font-weight: 500;
+			line-height: 1;
+
+			@include media-breakpoint-up(sm) {
+				margin-right: 30px;
+				float: left;
+			}
+
+			sup {
+				font-size: .4em;
+				vertical-align: super;
+			}
+		}
+
+		@include media-breakpoint-up(sm) {
+			.heading {
+				display: flex;
+				align-items: center;
+			}
+
+			mark {
+				font-size: 85px;
+				margin-right: 30px;
+				float: left;
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			mark {
+				font-size: 100px;
+			}
+		}
+	}
+}
+
+.typed-text {
+	mark {
+		background: none;
+	}
+}

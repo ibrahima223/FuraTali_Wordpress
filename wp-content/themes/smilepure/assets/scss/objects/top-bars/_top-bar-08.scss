@@ -1,0 +1,64 @@
+.top-bar-08 {
+	.top-bar-wrap {
+		height: 100%;
+		@include media-breakpoint-up(md) {
+			padding: 0 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 0 55px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0 85px;
+		}
+	}
+
+	.top-bar-left {
+		flex-grow: 1;
+	}
+
+	.top-bar-right {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin: 0 -15px;
+
+		> div {
+			padding: 0 15px;
+		}
+
+		.top-bar-social-network {
+			margin: 0 -13px;
+		}
+	}
+
+	.top-bar-social-network {
+		@extend %clearfix;
+
+		.social-link {
+			padding: 2px 13px;
+			float: left;
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+
+	.top-bar-button {
+		.tm-button {
+			height: 45px;
+			line-height: 41px;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.top-bar-08 {
+		.top-bar-wrap {
+			display: block;
+		}
+
+		.top-bar-right {
+			justify-content: flex-start;
+		}
+	}
+}

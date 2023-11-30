@@ -1,0 +1,23 @@
+body table.booked-calendar thead tr:first-child th {
+	height: 8rem;
+}
+
+body table.booked-calendar th .monthName {
+	font-size: 30px;
+	font-weight: 800;
+}
+
+body table.booked-calendar tr.days th {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.9px;
+}
+
+body table.booked-calendar td {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+body #booked-profile-page .booked-user * {
+	color: #fff;
+}

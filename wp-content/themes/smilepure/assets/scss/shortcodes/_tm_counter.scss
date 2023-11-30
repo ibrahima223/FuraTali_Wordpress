@@ -1,0 +1,211 @@
+.tm-counter {
+	margin-bottom: 30px;
+
+	&.align-left {
+		.number-wrap {
+			justify-content: flex-start;
+		}
+	}
+
+	&.align-center {
+		.number-wrap {
+			justify-content: center;
+		}
+	}
+
+	&.align-right {
+		.number-wrap {
+			justify-content: flex-end;
+		}
+	}
+
+	.number-wrap {
+		display: flex;
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	.text {
+		font-weight: 700;
+	}
+
+	.counter-image {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 80px;
+
+		img {
+			@extend %transit;
+		}
+
+		&:before {
+			@extend %transit;
+			position: absolute;
+			top: calc(100% + 30px);
+			left: 50%;
+			margin-left: -22px;
+			content: '';
+			width: 44px;
+			height: 7px;
+			background-color: #dfe0e0;
+			border-radius: 50%;
+		}
+	}
+
+	.icon {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 70px;
+		color: $color__primary;
+
+		i {
+			display: inline-block;
+			@extend %transit;
+		}
+
+		&:before {
+			@extend %transit;
+			position: absolute;
+			top: calc(100% + 30px);
+			left: 50%;
+			margin-left: -22px;
+			content: '';
+			width: 44px;
+			height: 7px;
+			background-color: #dfe0e0;
+			border-radius: 50%;
+		}
+	}
+
+	&:hover {
+		.counter-image,
+		.icon {
+			img,
+			i,
+			&:before {
+				-webkit-animation-duration: .5s;
+				animation-duration: .5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+				-webkit-animation-timing-function: ease;
+				animation-timing-function: ease;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;
+			}
+
+			img, i {
+				-webkit-animation-name: bounce;
+				animation-name: bounce;
+			}
+
+			&:before {
+				-webkit-animation-name: zoom-bounce;
+				animation-name: zoom-bounce;
+			}
+		}
+	}
+
+	&.style-01 {
+
+		.icon {
+			font-size: 60px;
+			line-height: 1;
+		}
+
+		.number-wrap {
+			margin-bottom: 17px;
+			font-size: 50px;
+			line-height: 1;
+			font-weight: 700;
+		}
+
+		.number-prefix {
+			font-size: 30px;
+		}
+
+		.number-suffix {
+			font-size: 30px;
+			line-height: 1;
+		}
+
+		.text {
+			font-size: 20px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+		}
+	}
+
+	&.style-02 {
+
+		.icon {
+			font-size: 60px;
+			line-height: 1;
+		}
+
+		.number-wrap {
+			margin-bottom: 20px;
+			font-size: 100px;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		.number-prefix {
+			font-weight: 700;
+			font-size: 60px;
+		}
+
+		.number-suffix {
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		.text {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+		}
+	}
+
+	&.style-03 {
+
+		.counter-image,
+		.icon {
+			margin-bottom: 40px;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.icon {
+			font-size: 60px;
+			line-height: 1;
+			margin-bottom: 35px;
+		}
+
+		.number-wrap {
+			margin-bottom: 17px;
+			font-size: 50px;
+			line-height: 1;
+			font-weight: 700;
+		}
+
+		.number-prefix {
+			font-size: 30px;
+		}
+
+		.number-suffix {
+			font-size: 30px;
+			line-height: 1;
+		}
+
+		.text {
+			font-size: 20px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+		}
+	}
+}

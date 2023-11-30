@@ -1,0 +1,24 @@
+.page-title-bar-02 {
+	.page-title-bar-inner {
+		position: relative;
+	}
+
+	.heading {
+		text-align: center;
+	}
+
+	.page-breadcrumb {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		width: 100%;
+	}
+
+	.insight_core_breadcrumb {
+		margin-top: 28px;
+		text-align: center;
+		@include media-breakpoint-down(md) {
+			margin-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+.tm-category-feature {
+
+	&.style-01 {
+		text-align: center;
+		width: 100%;
+		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.03);
+
+		.modern-grid {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1px;
+			overflow: hidden;
+			width: 100%;
+			background: #eee;
+		}
+
+		.grid-item {
+			&.current,
+			&:hover {
+				.cat-name {
+					color: #fff;
+				}
+
+				.icon {
+					span {
+						background-color: #fff;
+						border-color: #fff;
+					}
+				}
+			}
+		}
+
+		.cat-item-wrap {
+			@extend %transit;
+			background: #fff;
+			height: 100%;
+			padding: 20px 10px;
+		}
+
+		.icon {
+			font-size: 40px;
+			margin-bottom: 15px;
+
+			span {
+				display: inline-block;
+				border: 1px solid #eee;
+				width: 95px;
+				height: 95px;
+				border-radius: 50%;
+				line-height: 95px;
+				@extend %transit;
+			}
+		}
+
+		.cat-name {
+			word-break: break-word;
+			font-size: 16px;
+			margin-bottom: 0;
+			line-height: 1.266;
+		}
+	}
+}

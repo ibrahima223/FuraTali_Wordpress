@@ -1,0 +1,35 @@
+.tm-saving-item {
+	.content-wrap {
+		position: relative;
+		background: #fff;
+		padding: 20px;
+		border: 2px dashed #ddd;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.heading {
+		margin-bottom: 0;
+		font-size: 22px;
+	}
+
+	.price {
+		font-size: 46px !important;
+		margin-bottom: 0;
+		color: $color__primary;
+	}
+
+	.currency {
+		font-size: 24px;
+		vertical-align: super;
+	}
+
+	.sub-text {
+		position: absolute;
+		bottom: 0;
+		right: 5px;
+		font-style: italic;
+		font-size: 13px;
+	}
+}

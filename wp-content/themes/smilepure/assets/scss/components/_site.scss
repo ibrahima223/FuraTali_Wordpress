@@ -1,0 +1,112 @@
+.page-content {
+	position: relative;
+	z-index: 1;
+}
+
+/* Begin Make footer always bottom of page */
+@media only screen and (min-width: 1024px) {
+	#footer-wrap {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
+
+	.page-footer-parallax {
+		&:not(.page-template-one-page-scroll) {
+			height: 100%;
+
+			.site {
+				min-height: 100%;
+				position: static;
+			}
+
+			.content-wrapper {
+				position: relative;
+				z-index: 3;
+				background: inherit;
+			}
+
+			.page-footer-wrapper {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				z-index: 1;
+			}
+		}
+	}
+
+	.page-footer-parallax {
+		.site {
+			background-color: #ffffff;
+		}
+	}
+}
+
+.boxed {
+	margin: 0 auto;
+	max-width: 1200px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .06);
+
+	.content {
+		overflow: hidden;
+	}
+}
+
+.site {
+	overflow: hidden;
+}
+
+body {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.page-sidebar,
+.page-main-content {
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+
+.page-main-content {
+	.page-sidebar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Style padding page with sidebar
+
+body.page-has-sidebar {
+	.page-content {
+		padding: 0;
+	}
+
+	.page-main-content {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	&.has-title-bar-06,
+	&.has-title-bar-07 {
+		.page-main-content {
+			padding-top: 150px;
+			padding-bottom: 100px;
+		}
+
+		.page-sidebar {
+			&.page-sidebar-left,
+			&.page-sidebar-right {
+				.page-sidebar-content {
+					padding-top: 150px;
+					@include media-breakpoint-down(md) {
+						padding-top: 100px;
+					}
+				}
+			}
+		}
+	}
+}

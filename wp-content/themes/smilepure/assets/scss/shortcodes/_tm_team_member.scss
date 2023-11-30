@@ -1,0 +1,183 @@
+.tm-team-member {
+	.photo {
+		margin-bottom: 30px;
+	}
+
+	.name {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+
+	.position {
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 3px;
+	}
+
+	.team-footer {
+		margin-top: 25px;
+	}
+
+	.social-networks {
+		margin: 0 -10px;
+
+		a {
+			@extend %transit2;
+			display: inline-block;
+			padding: 5px 10px;
+			font-size: 18px;
+			line-height: 1;
+			color: inherit;
+		}
+	}
+
+	&.effect-grayscale {
+		.photo {
+			img {
+				@extend %transit2;
+				filter: grayscale(100%);
+			}
+		}
+
+		&:hover {
+			.photo {
+				img {
+					filter: none;
+				}
+			}
+		}
+	}
+
+	&.style-1 {
+		margin-bottom: 30px;
+
+		&:hover {
+			.photo {
+				img {
+					box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+					transform: translateY(-10px);
+				}
+			}
+		}
+
+		.description {
+			margin-top: 15px;
+		}
+
+		.photo {
+			position: relative;
+
+			img {
+				@extend %transit;
+				width: 100%;
+			}
+		}
+	}
+
+	&.style-2 {
+		margin-bottom: 30px;
+
+		.photo {
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		.position {
+			font-style: italic;
+		}
+
+		.description {
+			margin-top: 9px;
+		}
+	}
+
+	&.style-3 {
+		.inner {
+			position: relative;
+
+			&:hover {
+				.info {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
+			}
+		}
+
+		.photo {
+			position: relative;
+			margin-bottom: 0;
+
+			img {
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+				width: 100%;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $color__secondary;
+				opacity: 0.36;
+				z-index: 1;
+			}
+		}
+
+		.info {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			z-index: 2;
+			padding: 20px;
+			@include transit-back;
+			display: flex;
+			flex-direction: column;
+			transform: translateY(-20px);
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.name {
+			color: #fff;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.social-networks {
+			margin: 0;
+			width: 100%;
+			text-align: center;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			a {
+				color: #fff;
+
+				&:hover {
+					color: #fff;
+				}
+
+				i {
+					font-weight: initial;
+				}
+			}
+		}
+
+		.team-header {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,104 @@
+.tm-maps-popup {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .5);
+		z-index: 8;
+		opacity: 0;
+		@include transit;
+	}
+
+	.tm-maps-popup-text {
+		opacity: 0;
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		z-index: 9;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.tm-maps-popup-marker {
+		z-index: 7;
+		width: 32px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.animated-dot {
+			position: relative;
+			margin: 0;
+			width: 20px;
+			height: 20px;
+			margin-top: 10px;
+			margin-left: 10px;
+
+			.middle-dot {
+				&:after {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					font-family: Ionicons;
+					content: '\f456';
+					font-size: 56px;
+					color: $color__primary;
+				}
+			}
+
+			.signal,
+			.signal2 {
+				width: 200px;
+				height: 200px;
+				pointer-events: none;
+				border-radius: 50%;
+				position: absolute;
+				left: -90px;
+				top: -90px;
+				opacity: 0;
+				animation: animationSignal2 cubic-bezier(0, .55, .55, 1) 2s;
+				transform-origin: 50% 50%;
+				animation-fill-mode: forwards;
+				animation-iteration-count: infinite;
+				animation-delay: .78s;
+			}
+
+			.signal {
+				border: 2px solid rgba(0, 0, 0, .2);
+				box-shadow: inset 0 0 35px 10px rgba(0, 0, 0, .18);
+				animation-delay: .78s;
+			}
+
+			.signal2 {
+				border: 2px solid $color__primary;
+				animation-delay: 1s;
+				box-shadow: inset 0 0 35px 10px $color__primary;
+			}
+		}
+	}
+
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+
+		.tm-maps-popup-text {
+			opacity: 1;
+		}
+
+		.tm-maps-popup-marker {
+			opacity: 0;
+		}
+	}
+}

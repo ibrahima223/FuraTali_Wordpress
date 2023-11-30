@@ -1,0 +1,65 @@
+.tm-service-list {
+	background-color: #fff;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.03);
+
+	.service-list-item {
+		@extend %transit;
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 20px 30px;
+
+		+ .service-list-item {
+			border-top: 1px solid #eee;
+		}
+
+		&:after {
+			@extend %transit;
+			position: absolute;
+			bottom: 50%;
+			right: 0;
+			width: 5px;
+			height: 0;
+			background-color: $color__primary;
+			content: '';
+		}
+
+		&:hover {
+			box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.06);
+
+			&:after {
+				height: 100%;
+				bottom: 0;
+			}
+
+			a, .icon {
+				color: $color__primary;
+			}
+		}
+	}
+
+	.service-list-item-img {
+		width: 36px;
+		margin-right: 25px;
+	}
+
+	.icon {
+		font-size: 36px;
+		@extend %transit;
+	}
+
+	.icon,
+	.title {
+		display: inline-block;
+	}
+
+	.icon {
+		margin-right: 25px;
+		line-height: 1;
+	}
+
+	.title {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+}

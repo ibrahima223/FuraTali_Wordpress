@@ -1,0 +1,29 @@
+.top-bar-02 {
+	.top-bar-wrap {
+		height: 100%;
+		@include media-breakpoint-up(md) {
+			padding: 0 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 0 55px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0 85px;
+		}
+	}
+
+	.top-bar-right {
+		flex-grow: 1;
+		justify-content: flex-start;
+	}
+
+	.switcher-language-wrapper {
+		padding-right: 15px;
+	}
+}
+
+@media (max-width: 1250px) {
+	.top-bar-02 {
+		display: none;
+	}
+}

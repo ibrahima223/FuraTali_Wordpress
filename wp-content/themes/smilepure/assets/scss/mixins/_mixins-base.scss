@@ -1,0 +1,497 @@
+@mixin transit {
+	transition: all .3s cubic-bezier(.645, .045, .355, 1);
+}
+
+@mixin transit2 {
+	transition: all .5s cubic-bezier(.645, .045, .355, 1);
+}
+
+@mixin transit3 {
+	transition: all .7s ease;
+}
+
+@mixin transit-back {
+	-webkit-transition: all 0.3s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+	-moz-transition: all 0.3s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+	-ms-transition: all 0.3s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+	-o-transition: all 0.3s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+	transition: all 0.3s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+@mixin transit-back-2 {
+	-webkit-transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+	-moz-transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+	-ms-transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+	-o-transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+	transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+}
+
+%transit {
+	@include transit();
+}
+
+%transit2 {
+	@include transit2();
+}
+
+%transit3 {
+	@include transit3();
+}
+
+%transit-back {
+	@include transit-back();
+}
+
+// Mixin for font awesome version 5.x
+
+@mixin fontawesome {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+}
+
+%FontAwesomeSolid {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+}
+
+%FontAwesomeLight {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 300;
+}
+
+%FontAwesomeRegular {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 400;
+}
+
+%FontAwesomeBrands {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 400;
+}
+
+%FontAwesomeSolidImportant {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Pro' !important;
+	font-weight: 900;
+}
+
+%FontAwesomeLightImportant {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Pro' !important;
+	font-weight: 300;
+}
+
+%FontAwesomeRegularImportant {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Pro' !important;
+	font-weight: 400;
+}
+
+%FontAwesomeBrandsImportant {
+	@include fontawesome();
+	font-family: 'Font Awesome 5 Brands' !important;
+	font-weight: 400;
+}
+
+/*
+	ANIMATION
+*/
+
+// Bounce animation
+@-webkit-keyframes bounce {
+	50% {
+		-webkit-transform: translateY(-10px);
+	}
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@keyframes bounce {
+	50% {
+		transform: translateY(-10px);
+	}
+	0%, 100% {
+		transform: translateY(0px);
+	}
+}
+
+// Bounce 2
+@-webkit-keyframes bounce-2 {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px)
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+	}
+}
+
+@keyframes bounce-2 {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-20px);
+	}
+	60% {
+		transform: translateY(-10px);
+	}
+}
+
+// Zoom animation
+@keyframes zoom-bounce {
+	50% {
+		transform: scale(0.75);
+	}
+	0%, 100% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes zoom-bounce {
+	50% {
+		-webkit-transform: scale(0.75);
+	}
+	0%, 100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+// Separator bounce
+@-webkit-keyframes separator-bounce {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(.5);
+		transform: scale(.5);
+		opacity: .3;
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: .6;
+	}
+}
+
+@keyframes separator-bounce {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(.5);
+		transform: scale(.5);
+		opacity: .3;
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: .6;
+	}
+}
+
+// Blink
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Zoom Big
+@-webkit-keyframes zoomBig {
+	0% {
+		-webkit-transform: translate(-50%, -50%) scale(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+	}
+}
+
+@keyframes zoomBig {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+	}
+}
+
+// Line up
+@-webkit-keyframes lineUp {
+	0% {
+		-webki-transform: translateY(100%);
+		bottom: 0;
+	}
+
+	100% {
+		bottom: 100%;
+		transform: translateY(0);
+	}
+}
+
+@keyframes lineUp {
+	0% {
+		transform: translateY(100%);
+		bottom: 0;
+	}
+
+	100% {
+		bottom: 100%;
+		transform: translateY(0);
+	}
+}
+
+// Line Down
+@-webkit-keyframes lineDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+		top: 0;
+	}
+
+	100% {
+		top: 100%;
+		transform: translateY(0);
+	}
+}
+
+@keyframes lineDown {
+	0% {
+		transform: translateY(-100%);
+		top: 0;
+	}
+
+	100% {
+		top: 100%;
+		transform: translateY(0);
+	}
+}
+
+// Circle 2
+@-webkit-keyframes circle-2 {
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+@keyframes circle-2 {
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+// Circle 3
+@-webkit-keyframes circle-3 {
+	100% {
+		-webkit-transform: translate(-50%, -50%) scale(1.2);
+		opacity: 0;
+	}
+}
+
+@keyframes circle-3 {
+	100% {
+		transform: translate(-50%, -50%) scale(1.2);
+		opacity: 0;
+	}
+}
+
+// Sonar Effect
+@-webkit-keyframes sonarEffect {
+	0% {
+		opacity: .3;
+	}
+	40% {
+		opacity: .5;
+	}
+	100% {
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@keyframes sonarEffect {
+	0% {
+		opacity: .3;
+	}
+	40% {
+		opacity: .5;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+// Box image pop animation
+@-webkit-keyframes box-image-pop {
+	50% {
+		-webkit-transform: scale(1.1);
+	}
+}
+
+@keyframes box-image-pop {
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+// Tada
+@-webkit-keyframes tada {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+	}
+	10%,
+	20% {
+		-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+	}
+	30%,
+	50%,
+	70%,
+	90% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+	40%,
+	60%,
+	80% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes tada {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+	10%,
+	20% {
+		transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+	}
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+	40%,
+	60%,
+	80% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+// shake
+@-webkit-keyframes shake {
+	0% {
+		-webkit-transform: skewX(-15deg);
+	}
+	5% {
+		-webkit-transform: skewX(15deg);
+	}
+	10% {
+		-webkit-transform: skewX(-15deg);
+	}
+	15% {
+		-webkit-transform: skewX(15deg);
+	}
+	20% {
+		-webkit-transform: skewX(0deg);
+	}
+	100% {
+		-webkit-transform: skewX(0deg);
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: skewX(-15deg);
+	}
+	5% {
+		transform: skewX(15deg);
+	}
+	10% {
+		transform: skewX(-15deg);
+	}
+	15% {
+		transform: skewX(15deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
+}
+
+@mixin link-hover {
+	color: inherit;
+	font-size: inherit;
+	display: inline;
+	padding-bottom: 2px;
+	background-size: 0px 2px;
+	background-repeat: no-repeat;
+	background-position: left 85%;
+	line-height: 1.44;
+	background-image: linear-gradient(to right, #00D2B2 0%, #FEF294 100%);
+
+	&:hover {
+		background-size: 100% 2px;
+	}
+}
+
+%link-hover {
+	@include link-hover();
+}

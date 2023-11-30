@@ -1,0 +1,9 @@
+.page-title-bar-03 {
+	.insight_core_breadcrumb {
+		margin-top: 10px;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+			margin-top: 0;
+		}
+	}
+}

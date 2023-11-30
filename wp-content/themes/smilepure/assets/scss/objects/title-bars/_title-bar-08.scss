@@ -1,0 +1,28 @@
+.page-title-bar-08 {
+	.insight_core_breadcrumb {
+		margin-top: 10px;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+			margin-top: 0;
+		}
+	}
+
+	.page-title-bar-inner {
+		.container-fluid {
+			padding-left: 100px;
+			padding-right: 100px;
+			@include media-breakpoint-down(lg) {
+				padding-left: 70px;
+				padding-right: 70px;
+			}
+			@include media-breakpoint-down(md) {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,172 @@
+.header-07 {
+	.header-wrap {
+		display: flex;
+		align-items: center;
+
+		@media screen and (min-width: 1400px) {
+			padding: 0 55px;
+		}
+	}
+
+	.header-below {
+		padding: 0 15px;
+
+		@media screen and (min-width: 1400px) {
+			padding: 0 70px;
+		}
+	}
+
+	.branding,
+	.header-right {
+		flex-shrink: 0;
+	}
+
+	.page-navigation {
+		flex-grow: 1;
+	}
+
+	.branding__logo {
+		display: inline-block;
+	}
+
+	.header-right {
+		justify-self: flex-end;
+	}
+
+	.desktop-menu & {
+		.menu--primary {
+			position: static;
+			text-align: center;
+		}
+	}
+
+	.header-above {
+		position: relative;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+
+		& > .container,
+		& > .container > .row,
+		& > .container > .row > .col-xs-12 {
+			position: static;
+		}
+	}
+
+	.header-right-inner {
+		display: block;
+	}
+
+	.header-below-inner {
+		display: block;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.header-below-left {
+		flex-grow: 1;
+	}
+
+	.header-below-right {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+
+		> div {
+			padding: 0 10px;
+		}
+	}
+
+	.header-info {
+		width: 930px;
+
+		.info-item {
+			display: flex;
+			align-items: center;
+			padding: 29px 20px 29px 40px;
+			width: 100%;
+		}
+
+		.info-icon {
+			width: 55px;
+			flex-shrink: 0;
+			font-size: 40px;
+			line-height: 1;
+		}
+
+		.info-content {
+			flex-grow: 1;
+		}
+
+		.info-title {
+			display: block;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.18;
+			margin-bottom: 3px;
+		}
+
+		.info-sub-title {
+			display: block;
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		.swiper-slide {
+			.info-item {
+				border-left: 1px solid #ededed;
+			}
+		}
+
+		.swiper-slide-next {
+			+ .swiper-slide {
+				.info-item {
+					border-right: 1px solid #ededed;
+				}
+			}
+		}
+	}
+
+	.mobile-menu & {
+		.branding {
+			flex-grow: 1;
+		}
+
+		.header-above {
+			padding: 12px 0;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		&.headroom--not-top {
+			.header-below {
+				display: none;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.header-07 {
+		.header-info {
+			width: 560px;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.header-07 {
+		.header-info {
+			width: 280px;
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.header-07 {
+		.header-button {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.rtl.desktop-menu .sm-simple .sub-menu .toggle-sub-menu:before,
+.rtl.desktop-menu .sm-simple .children .toggle-sub-menu:before {
+  content: "\f104";
+}
+
+.rtl.desktop-menu .sm-simple > li > ul {
+  left: auto !important;
+  right: 0 !important;
+}
+
+.rtl.desktop-menu .sm-simple > li > ul ul {
+  right: 100% !important;
+  top: 0;
+}
+
+.rtl.desktop-menu .sm-simple:not(.sm-vertical) .has-mega-menu .mega-menu {
+  right: 0;
+  left: auto !important;
+  width: 100% !important;
+}
+
+.rtl .page-mobile-main-menu .menu-item-wrap {
+  text-align: right;
+}
+
+.rtl .page-mobile-main-menu .toggle-sub-menu:after {
+  content: "\f053";
+}
+
+.rtl .tm-swiper .swiper-button-next {
+  right: auto;
+}
+
+.rtl .tm-swiper .swiper-button-next i:before {
+  content: "\f104";
+}
+
+.rtl .tm-swiper .swiper-button-prev i:before {
+  content: "\f105";
+}
+
+.rtl .fa-long-arrow-alt-left:before {
+  content: "\f30b";
+}
+
+.rtl .fa-long-arrow-alt-right:before {
+  content: "\f30a";
+}
+
+.rtl .fa-angle-right:before {
+  content: "\f104";
+}
+
+.rtl .fa-angle-left:before {
+  content: "\f105";
+}
+
+.rtl .fa-chevron-left:before {
+  content: "\f054";
+}
+
+.rtl .fa-chevron-right:before {
+  content: "\f053";
+}
+
+.rtl .tm-gallery-slider .lSAction .lSNext {
+  right: auto;
+}
+
+.rtl .tm-gallery-slider .lSAction .lSNext .nav-button-icon:before {
+  content: "\f104";
+}
+
+.rtl .tm-gallery-slider .lSAction .lSPrev .nav-button-icon:before {
+  content: "\f105";
+}
+
+.rtl .insight_core_breadcrumb a:after {
+  content: '\f104';
+}

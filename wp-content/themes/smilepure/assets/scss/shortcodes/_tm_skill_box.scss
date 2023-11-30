@@ -1,0 +1,32 @@
+.tm-skill-box {
+	.title {
+		border-bottom: 1px dashed #D4D2D2;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+
+		.icon,
+		.title-text {
+			display: inline-block;
+		}
+
+		.icon {
+			font-size: 20px;
+			margin-right: 8px;
+			flex-shrink: 0;
+		}
+
+		.title-text {
+			font-size: 15px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+
+	.text {
+		font-size: 16px;
+
+		+ .text {
+			margin-top: 5px;
+		}
+	}
+}

@@ -1,0 +1,209 @@
+.page-template-coming-soon {
+	.cs-container {
+		width: 100%;
+		text-align: center;
+
+		.cs-col {
+			padding: 30px 15px;
+		}
+
+		.cs-content {
+			padding: 30px 0;
+		}
+
+		.countdown-wrap {
+			margin: 0 -20px;
+		}
+
+		.day,
+		.hour,
+		.minute,
+		.second {
+			margin: 0 20px;
+		}
+	}
+
+	.coming-soon-logo {
+		margin-bottom: 40px;
+	}
+
+	.cs-title {
+		font-size: 40px;
+		text-transform: uppercase;
+		letter-spacing: 0.67px;
+	}
+
+	.cs-form {
+		max-width: 570px;
+		margin: 60px auto 0;
+	}
+
+	.cs-social-networks {
+		.social-link {
+			display: inline-block;
+			font-size: 20px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			line-height: 50px;
+			color: #fff;
+			background-color: $color__primary;
+			text-align: center;
+			margin: 0 2px 10px;
+
+			&:hover {
+				color: $color__primary;
+				background-color: #fff;
+				box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+			}
+
+			&[href*="facebook"] {
+				background-color: #3b5999;
+
+				&:hover {
+					color: #3b5999;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="twitter"] {
+				background-color: #55acee;
+
+				&:hover {
+					color: #55acee;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="youtube"] {
+				background-color: #cd201f;
+
+				&:hover {
+					color: #cd201f;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="pinterest"] {
+				background-color: #bd081c;
+
+				&:hover {
+					color: #bd081c;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="linkedin"] {
+				background-color: #0077b5;
+
+				&:hover {
+					color: #0077b5;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="instagram"] {
+				background-color: #e4405f;
+
+				&:hover {
+					color: #e4405f;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="dribbble"] {
+				background-color: #ea4c89;
+
+				&:hover {
+					color: #ea4c89;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="vimeo"] {
+				background-color: #1ab7ea;
+
+				&:hover {
+					color: #1ab7ea;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="weibo"] {
+				background-color: #df2029;
+
+				&:hover {
+					color: #df2029;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+			&[href*="behance"] {
+				background-color: #131418;
+
+				&:hover {
+					color: #131418;
+					background-color: #fff;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+				}
+			}
+
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.cs-col {
+			width: 50%;
+			float: left;
+			height: 100vh;
+			position: relative;
+		}
+
+		.cs-col-right {
+			background-color: #f0f8ff;
+		}
+
+		&.admin-bar {
+			.cs-col {
+				height: calc(100vh - 32px);
+			}
+		}
+
+		.cs-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: calc(100% - 30px);
+			text-align: center;
+		}
+
+		.coming-soon-logo,
+		.cs-social-networks {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.coming-soon-logo {
+			top: 50px;
+		}
+
+		.cs-social-networks {
+			bottom: 50px;
+		}
+
+		.cs-title {
+			font-size: 50px;
+		}
+	}
+}
